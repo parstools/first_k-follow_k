@@ -124,17 +124,6 @@ bool Grammar::addFirstOfRule(TokenSet &outSet, OneRule& rule, int startIndex) {
     return changed;
 }
 
-/*
- * dla k=1 stopuje sie na pierwszym terminalu lub na nieterrminalu nie zawierajacym epsilona
- * tutaj trzeba by za pierwszym razem dodawac do zbioru a nastepnie robić concat dotąd
- * az beda same najdluzsze ciagi
- * potrzeba TBitSet isEmpty()
- *
- * ttuaj nie mozna bezposrednio dodawac do zbioru
- * ale tworzyć zbior tymczasowy, który będzie na koncu dodany do wynikowego
- *
- * */
-
 bool Grammar::addFirstOfRule_k(TTokenSet &outSet, OneRule& rule, int startIndex) {
     TTokenSet tempSet(outSet.getk(), outSet.getSize());
     tempSet.eps = true;
