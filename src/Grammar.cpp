@@ -142,10 +142,6 @@ bool Grammar::addFirstOfRule_k(TTokenSet &outSet, OneRule& rule, int startIndex)
     return outSet.unionWith(tempSet);
 }
 
-bool Grammar::checkLL1() {
-
-}
-
 void Grammar::print(const GramNames *names)
 {
     for (int i=0; i<rulesByNonterminal.size(); i++)
