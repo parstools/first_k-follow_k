@@ -1,0 +1,18 @@
+; ciągi typu accc..ccccb lub bccc..ccca
+E -> a C b
+E -> b C a
+C -> C c
+C -> epsilon
+
+Non-terminals: E C
+Terminals: a b c
+EPS = C
+FIRST[E] = a b
+FIRST[C] = c
+FOLLOW[E] =
+FOLLOW[C] = a b c
+PREDICT:
+E ->  a C b : a
+E ->  b C a : b
+C ->  C c : c
+C -> epsilon : a b c

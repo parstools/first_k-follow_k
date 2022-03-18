@@ -1,0 +1,22 @@
+;if .. then .. else (po prekszt.)-nie jest SLR
+S -> i C t S S'
+S -> a
+S' -> e S
+S' -> epsilon
+C -> b
+
+Non-terminals: S C S'
+Terminals: i t a e b
+EPS = S'
+FIRST[S] = i a
+FIRST[C] = b
+FIRST[S'] = e
+FOLLOW[S] = e
+FOLLOW[C] = t
+FOLLOW[S'] = e
+PREDICT:
+S ->  i C t S S' : i
+S ->  a : a
+S' ->  e S : e
+S' -> epsilon : e
+C ->  b : b

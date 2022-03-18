@@ -1,0 +1,17 @@
+;prostszy przykład do testowania poprawiania błędów
+;bii
+E -> b C e
+C -> C ; i
+C -> i
+
+Non-terminals: E C
+Terminals: b e ; i
+EPS =
+FIRST[E] = b
+FIRST[C] = i
+FOLLOW[E] =
+FOLLOW[C] = e ;
+PREDICT:
+E ->  b C e : b
+C ->  C ; i : i
+C ->  i : i

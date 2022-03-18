@@ -1,0 +1,6 @@
+//Foundation s.2
+s : ID
+  | ID '=' expr
+  | 'unsigned'* 'int' ID
+  | 'unsigned'* ID ID
+  ;

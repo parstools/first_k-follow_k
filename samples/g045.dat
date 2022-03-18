@@ -1,0 +1,35 @@
+;do wartosciowania
+;i-identyfikator f-stala liczbowa
+E -> E + T
+E -> E - T
+E -> T
+T -> T * F
+T -> T / F
+T -> F
+F -> - F
+F -> ( E )
+F -> i
+F -> i ( E )
+F -> f
+
+Non-terminals: E T F
+Terminals: + - * / ( ) i f
+EPS =
+FIRST[E] = - ( i f
+FIRST[T] = - ( i f
+FIRST[F] = - ( i f
+FOLLOW[E] = + - )
+FOLLOW[T] = + - * / )
+FOLLOW[F] = + - * / )
+PREDICT:
+E ->  E + T : - ( i f
+E ->  E - T : - ( i f
+E ->  T : - ( i f
+T ->  T * F : - ( i f
+T ->  T / F : - ( i f
+T ->  F : - ( i f
+F ->  - F : -
+F ->  ( E ) : (
+F ->  i : i
+F ->  i ( E ) : i
+F ->  f : f

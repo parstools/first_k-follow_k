@@ -1,0 +1,14 @@
+;przyklad na rekurencje:
+;First(E) powinno byc {*}
+;jezyk: *,*+,*++..(mimo rekurencji jest maly stos)
+E -> E +
+E -> *
+
+Non-terminals: E
+Terminals: + *
+EPS =
+FIRST[E] = *
+FOLLOW[E] = +
+PREDICT:
+E ->  E + : *
+E ->  * : *

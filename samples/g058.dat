@@ -1,0 +1,10 @@
+;tutaj jest błąd bo z zerowego nie można przejsć
+S -> S i
+
+Non-terminals: S
+Terminals: i
+EPS =
+FIRST[S] =
+FOLLOW[S] = i
+PREDICT:
+S ->  S i :

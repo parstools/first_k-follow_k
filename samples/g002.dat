@@ -1,0 +1,28 @@
+;»¿#other, not exists in paper
+;cccd
+;->check for cccccd i acccddd
+S -> A S d
+S -> B S
+S -> epsilon
+A -> a
+A -> c
+B -> a
+B -> b
+
+Non-terminals: S A B
+Terminals: d a c b
+EPS = S
+FIRST[S] = a c b
+FIRST[A] = a c
+FIRST[B] = a b
+FOLLOW[S] = d
+FOLLOW[A] = d a c b
+FOLLOW[B] = d a c b
+PREDICT:
+S ->  A S d : a c
+S ->  B S : a b
+S -> epsilon : d
+A ->  a : a
+A ->  c : c
+B ->  a : a
+B ->  b : b

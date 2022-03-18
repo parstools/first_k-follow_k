@@ -1,0 +1,18 @@
+;gdy eliminacja łańcuchowych - powinno byc to samo co powyższe
+E -> T
+E -> E b T
+E -> T r T
+T -> t
+
+Non-terminals: E T
+Terminals: b r t
+EPS =
+FIRST[E] = t
+FIRST[T] = t
+FOLLOW[E] = b
+FOLLOW[T] = b r
+PREDICT:
+E ->  T : t
+E ->  E b T : t
+E ->  T r T : t
+T ->  t : t

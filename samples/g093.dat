@@ -1,0 +1,12 @@
+;mały stos dla języka +++++...
+E -> E +
+E -> epsilon
+
+Non-terminals: E
+Terminals: +
+EPS = E
+FIRST[E] = +
+FOLLOW[E] = +
+PREDICT:
+E ->  E + : +
+E -> epsilon : +

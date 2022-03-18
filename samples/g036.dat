@@ -1,0 +1,11 @@
+;przykład poprawy z zamianą np. błędnie wpisanego słowa kluczowego then
+;iaaaea
+E -> i a t a e a
+
+Non-terminals: E
+Terminals: i a t e
+EPS =
+FIRST[E] = i
+FOLLOW[E] =
+PREDICT:
+E ->  i a t a e a : i

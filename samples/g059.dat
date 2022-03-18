@@ -1,0 +1,14 @@
+;do dascal: aby b && done == false musiało miec nawiasy
+E -> t
+E -> E b t
+E -> t r t
+
+Non-terminals: E
+Terminals: t b r
+EPS =
+FIRST[E] = t
+FOLLOW[E] = b
+PREDICT:
+E ->  t : t
+E ->  E b t : t
+E ->  t r t : t

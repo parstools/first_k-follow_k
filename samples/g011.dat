@@ -1,0 +1,21 @@
+; rozwiazanie 'dangling else' wg. L07SecondTry.pdf (17 LALR i 17 LR(1))
+;S=stmt, e=Expr, i=if, t=then, W=WithElse, o=Other statements
+S -> i e t S
+S -> i e t W e S
+S -> o
+W -> i e t W e W
+W -> o
+
+Non-terminals: S W
+Terminals: i e t o
+EPS =
+FIRST[S] = i o
+FIRST[W] = i o
+FOLLOW[S] =
+FOLLOW[W] = e
+PREDICT:
+S ->  i e t S : i
+S ->  i e t W e S : i
+S ->  o : o
+W ->  i e t W e W : i
+W ->  o : o

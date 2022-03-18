@@ -1,0 +1,12 @@
+;maly stos (jezyk a+a+a+a..)
+E -> E + a
+E -> a
+
+Non-terminals: E
+Terminals: + a
+EPS =
+FIRST[E] = a
+FOLLOW[E] = +
+PREDICT:
+E ->  E + a : a
+E ->  a : a

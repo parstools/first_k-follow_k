@@ -1,0 +1,18 @@
+; tu sprawdzenie czy dwie bazowe dadzą to samo closure
+A -> B
+A -> b B
+B -> A
+B -> a A
+
+Non-terminals: A B
+Terminals: b a
+EPS =
+FIRST[A] = b a
+FIRST[B] = b a
+FOLLOW[A] =
+FOLLOW[B] =
+PREDICT:
+A ->  B : b a
+A ->  b B : b
+B ->  A : b a
+B ->  a A : a

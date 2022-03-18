@@ -1,0 +1,18 @@
+;jezyk: +*+*..*+
+;przyklad,ze nalezy nie ograniczac sie tylko do pierwszego symbolu produkcji
+;powinno byc {+} dla first
+A -> B +
+B -> A *
+B -> epsilon
+
+Non-terminals: A B
+Terminals: + *
+EPS = B
+FIRST[A] = +
+FIRST[B] = +
+FOLLOW[A] = *
+FOLLOW[B] = +
+PREDICT:
+A ->  B + : +
+B ->  A * : +
+B -> epsilon : +

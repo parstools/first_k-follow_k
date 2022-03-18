@@ -1,0 +1,12 @@
+;ciagi aaa..
+S -> a S
+S -> epsilon
+
+Non-terminals: S
+Terminals: a
+EPS = S
+FIRST[S] = a
+FOLLOW[S] =
+PREDICT:
+S ->  a S : a
+S -> epsilon :

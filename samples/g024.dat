@@ -1,0 +1,12 @@
+;zad z egzaminu
+S -> a S b
+S -> epsilon
+
+Non-terminals: S
+Terminals: a b
+EPS = S
+FIRST[S] = a
+FOLLOW[S] = b
+PREDICT:
+S ->  a S b : a
+S -> epsilon : b

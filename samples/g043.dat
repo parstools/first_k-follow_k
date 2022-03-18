@@ -1,0 +1,18 @@
+;Przykład grmatyki LR(0) 7.11 s.194
+E -> E + F
+E -> F
+F -> i
+F -> ( E )
+
+Non-terminals: E F
+Terminals: + i ( )
+EPS =
+FIRST[E] = i (
+FIRST[F] = i (
+FOLLOW[E] = + )
+FOLLOW[F] = + )
+PREDICT:
+E ->  E + F : i (
+E ->  F : i (
+F ->  i : i
+F ->  ( E ) : (

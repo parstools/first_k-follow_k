@@ -1,0 +1,25 @@
+;my changed
+;input bc, wchodzi S->Ac,A->B,B->b
+S -> A c
+S -> A d
+A -> B
+A -> B d
+B -> a B
+B -> b
+
+Non-terminals: S A B
+Terminals: c d a b
+EPS =
+FIRST[S] = a b
+FIRST[A] = a b
+FIRST[B] = a b
+FOLLOW[S] =
+FOLLOW[A] = c d
+FOLLOW[B] = c d
+PREDICT:
+S ->  A c : a b
+S ->  A d : a b
+A ->  B : a b
+A ->  B d : a b
+B ->  a B : a
+B ->  b : b

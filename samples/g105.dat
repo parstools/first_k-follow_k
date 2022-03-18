@@ -1,0 +1,24 @@
+; łańcuchowe
+S -> S E
+S -> E
+E -> F
+F -> T
+T -> i
+
+Non-terminals: S E F T
+Terminals: i
+EPS =
+FIRST[S] = i
+FIRST[E] = i
+FIRST[F] = i
+FIRST[T] = i
+FOLLOW[S] = i
+FOLLOW[E] = i
+FOLLOW[F] = i
+FOLLOW[T] = i
+PREDICT:
+S ->  S E : i
+S ->  E : i
+E ->  F : i
+F ->  T : i
+T ->  i : i

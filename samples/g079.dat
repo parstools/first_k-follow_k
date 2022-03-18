@@ -1,0 +1,12 @@
+;podobno z http://kompilatory.agh.edu.pl/ nie jest LR(0)
+S -> S a
+S -> a
+
+Non-terminals: S
+Terminals: a
+EPS =
+FIRST[S] = a
+FOLLOW[S] = a
+PREDICT:
+S ->  S a : a
+S ->  a : a

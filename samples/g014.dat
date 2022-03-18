@@ -1,0 +1,22 @@
+;else L-long s else, S- short bez else, G-general (jest konflikt w LR(1))
+G -> S
+G -> L
+G -> s
+S -> i b t G
+L -> i b t L e G
+
+Non-terminals: G S L
+Terminals: s i b t e
+EPS =
+FIRST[G] = s i
+FIRST[S] = i
+FIRST[L] = i
+FOLLOW[G] = e
+FOLLOW[S] = e
+FOLLOW[L] = e
+PREDICT:
+G ->  S : i
+G ->  L : i
+G ->  s : s
+S ->  i b t G : i
+L ->  i b t L e G : i

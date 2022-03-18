@@ -1,0 +1,18 @@
+;wystepuje konflikt redukcja-redukcja
+S -> a B
+S -> a
+B -> b
+B -> epsilon
+
+Non-terminals: S B
+Terminals: a b
+EPS = B
+FIRST[S] = a
+FIRST[B] = b
+FOLLOW[S] =
+FOLLOW[B] =
+PREDICT:
+S ->  a B : a
+S ->  a : a
+B ->  b : b
+B -> epsilon :

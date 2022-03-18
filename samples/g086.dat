@@ -1,0 +1,20 @@
+;z http://en.wikipedia.org/wiki/LR_parser które tłumaczyłem
+E -> E * B
+E -> E + B
+E -> B
+B -> 0
+B -> 1
+
+Non-terminals: E B
+Terminals: * + 0 1
+EPS =
+FIRST[E] = 0 1
+FIRST[B] = 0 1
+FOLLOW[E] = * +
+FOLLOW[B] = * +
+PREDICT:
+E ->  E * B : 0 1
+E ->  E + B : 0 1
+E ->  B : 0 1
+B ->  0 : 0
+B ->  1 : 1

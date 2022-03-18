@@ -1,0 +1,11 @@
+;powinien sprawdzac, ze jest błędny, bo nie można wyjśc ze stanu numer 2
+S -> i S
+
+Non-terminals: S
+Terminals: i
+EPS =
+FIRST[S] = i
+FOLLOW[S] =
+PREDICT:
+S ->  i S : i
+

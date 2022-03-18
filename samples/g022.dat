@@ -1,0 +1,25 @@
+A -> c
+A -> epsilon
+A -> B a
+A -> d
+B -> A
+B -> b
+C -> A e
+
+Non-terminals: A B C
+Terminals: c a d b e
+EPS = A B
+FIRST[A] = c a d b
+FIRST[B] = c a d b
+FIRST[C] = c a d b e
+FOLLOW[A] = a e
+FOLLOW[B] = a
+FOLLOW[C] =
+PREDICT:
+A ->  c : c
+A -> epsilon : a e
+A ->  B a : c a d b
+A ->  d : d
+B ->  A : c a d b
+B ->  b : b
+C ->  A e : c a d b e

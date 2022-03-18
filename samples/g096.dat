@@ -1,0 +1,58 @@
+;pierwsza wersja języka simplan
+E -> D B
+D -> epsilon
+D -> L ;
+L -> i
+L -> L , i
+B -> { C }
+C -> epsilon
+C -> C S
+S -> i = X
+X -> T
+X -> X + T
+X -> X - T
+T -> F
+T -> T * F
+T -> T / F
+F -> i
+F -> n
+
+Non-terminals: E D B L C S X T F
+Terminals: ; i , { } = + - * / n
+EPS = D C
+FIRST[E] = i {
+FIRST[D] = i
+FIRST[B] = {
+FIRST[L] = i
+FIRST[C] = i
+FIRST[S] = i
+FIRST[X] = i n
+FIRST[T] = i n
+FIRST[F] = i n
+FOLLOW[E] =
+FOLLOW[D] = {
+FOLLOW[B] =
+FOLLOW[L] = ; ,
+FOLLOW[C] = i }
+FOLLOW[S] = i }
+FOLLOW[X] = i } + -
+FOLLOW[T] = i } + - * /
+FOLLOW[F] = i } + - * /
+PREDICT:
+E ->  D B : i {
+D -> epsilon : {
+D ->  L ; : i
+L ->  i : i
+L ->  L , i : i
+B ->  { C } : {
+C -> epsilon : i }
+C ->  C S : i
+S ->  i = X : i
+X ->  T : i n
+X ->  X + T : i n
+X ->  X - T : i n
+T ->  F : i n
+T ->  T * F : i n
+T ->  T / F : i n
+F ->  i : i
+F ->  n : n

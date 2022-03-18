@@ -1,0 +1,12 @@
+;z http://en.wikipedia.org/wiki/LR_parser prosta nie LR(0) konfikt shift-redukcja jest SLR
+E -> 1 E
+E -> 1
+
+Non-terminals: E
+Terminals: 1
+EPS =
+FIRST[E] = 1
+FOLLOW[E] =
+PREDICT:
+E ->  1 E : 1
+E ->  1 : 1

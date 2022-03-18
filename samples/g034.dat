@@ -1,0 +1,24 @@
+;przyklad,ze tylko poczatkowy symbol nie wystarcza:
+;FIRST(E) powinno byc {*,+} a nie {*}
+;nie jest SLR
+E -> A B +
+A -> *
+A -> epsilon
+B -> *
+B -> epsilon
+
+Non-terminals: E A B
+Terminals: + *
+EPS = A B
+FIRST[E] = + *
+FIRST[A] = *
+FIRST[B] = *
+FOLLOW[E] =
+FOLLOW[A] = + *
+FOLLOW[B] = +
+PREDICT:
+E ->  A B + : + *
+A ->  * : *
+A -> epsilon : + *
+B ->  * : *
+B -> epsilon : +

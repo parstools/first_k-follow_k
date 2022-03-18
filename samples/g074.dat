@@ -1,0 +1,12 @@
+; tu powinien być bład , bo E nie jest zdefiniowane
+E -> E + i
+E -> E * i
+
+Non-terminals: E
+Terminals: + i *
+EPS =
+FIRST[E] =
+FOLLOW[E] = + *
+PREDICT:
+E ->  E + i :
+E ->  E * i :

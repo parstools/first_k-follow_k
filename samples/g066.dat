@@ -1,0 +1,26 @@
+;drugi przyklad do lr(1)-nie daje sie uproscic do lalr(1)
+;konflikt R-R
+;zeszyt MetTransl s.86
+S -> a A d
+S -> b B d
+S -> a B e
+S -> b A e
+A -> c
+B -> c
+
+Non-terminals: S A B
+Terminals: a d b e c
+EPS =
+FIRST[S] = a b
+FIRST[A] = c
+FIRST[B] = c
+FOLLOW[S] =
+FOLLOW[A] = d e
+FOLLOW[B] = d e
+PREDICT:
+S ->  a A d : a
+S ->  b B d : b
+S ->  a B e : a
+S ->  b A e : b
+A ->  c : c
+B ->  c : c

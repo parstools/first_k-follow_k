@@ -1,0 +1,18 @@
+;4.3 fig 8 and 5.4
+S -> A c
+S -> A d
+A -> a A
+A -> b
+
+Non-terminals: S A
+Terminals: c d a b
+EPS =
+FIRST[S] = a b
+FIRST[A] = a b
+FOLLOW[S] =
+FOLLOW[A] = c d
+PREDICT:
+S ->  A c : a b
+S ->  A d : a b
+A ->  a A : a
+A ->  b : b

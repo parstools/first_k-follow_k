@@ -1,0 +1,11 @@
+S -> S i
+S -> i
+
+Non-terminals: S
+Terminals: i
+EPS =
+FIRST[S] = i
+FOLLOW[S] = i
+PREDICT:
+S ->  S i : i
+S ->  i : i

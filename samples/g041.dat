@@ -1,0 +1,18 @@
+;maly stos jest, gdy mamy E->E+cos, duży gdy E->cos+E
+;przyklad na język bi;i;i;i...;ie, gdzie b=begin i=ident, e=end
+;ma znaleźć, że należy wstawić średnik w bii;ie po pierwszym i
+E -> b C e
+C -> C ; i
+C -> i
+
+Non-terminals: E C
+Terminals: b e ; i
+EPS =
+FIRST[E] = b
+FIRST[C] = i
+FOLLOW[E] =
+FOLLOW[C] = e ;
+PREDICT:
+E ->  b C e : b
+C ->  C ; i : i
+C ->  i : i

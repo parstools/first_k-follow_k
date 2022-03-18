@@ -1,0 +1,22 @@
+;dwa z niższym , jeden z wyższym i jeden z najwyższym
+E -> E O E
+E -> i
+O -> +
+O -> -
+O -> *
+O -> ^
+
+Non-terminals: E O
+Terminals: i + - * ^
+EPS =
+FIRST[E] = i
+FIRST[O] = + - * ^
+FOLLOW[E] = + - * ^
+FOLLOW[O] = i
+PREDICT:
+E ->  E O E : i
+E ->  i : i
+O ->  + : +
+O ->  - : -
+O ->  * : *
+O ->  ^ : ^

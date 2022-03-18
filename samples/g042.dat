@@ -1,0 +1,18 @@
+;7.17 s. 203 Uproszczona wersja gramatyki z 7.12a,eliminacja łancuchowych
+E -> E + T
+E -> T
+T -> T * i
+T -> i
+
+Non-terminals: E T
+Terminals: + * i
+EPS =
+FIRST[E] = i
+FIRST[T] = i
+FOLLOW[E] = +
+FOLLOW[T] = + *
+PREDICT:
+E ->  E + T : i
+E ->  T : i
+T ->  T * i : i
+T ->  i : i

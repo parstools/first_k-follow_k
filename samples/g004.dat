@@ -1,0 +1,37 @@
+;»¿#G2.3 z Thesis s.15 bÄdÄca LL(1) a nie LALR(1)
+;"Thesis G2.3"
+S -> a A
+S -> b B
+A -> C a
+A -> D b
+B -> C b
+B -> D a
+C -> E
+D -> E
+E -> epsilon
+
+Non-terminals: S A B C D E
+Terminals: a b
+EPS = C D E
+FIRST[S] = a b
+FIRST[A] = a b
+FIRST[B] = a b
+FIRST[C] =
+FIRST[D] =
+FIRST[E] =
+FOLLOW[S] =
+FOLLOW[A] =
+FOLLOW[B] =
+FOLLOW[C] = a b
+FOLLOW[D] = a b
+FOLLOW[E] = a b
+PREDICT:
+S ->  a A : a
+S ->  b B : b
+A ->  C a : a
+A ->  D b : b
+B ->  C b : b
+B ->  D a : a
+C ->  E : a b
+D ->  E : a b
+E -> epsilon : a b

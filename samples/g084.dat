@@ -1,0 +1,20 @@
+;z http://en.wikipedia.org/wiki/LR_parser prosta nie LR(0) konfikt redukcja-redukcja, jest SLR
+E -> A 1
+E -> B 2
+A -> 1
+B -> 1
+
+Non-terminals: E A B
+Terminals: 1 2
+EPS =
+FIRST[E] = 1
+FIRST[A] = 1
+FIRST[B] = 1
+FOLLOW[E] =
+FOLLOW[A] = 1
+FOLLOW[B] = 2
+PREDICT:
+E ->  A 1 : 1
+E ->  B 2 : 1
+A ->  1 : 1
+B ->  1 : 1

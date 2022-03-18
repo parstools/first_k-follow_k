@@ -1,0 +1,21 @@
+;Gramatyka nie będąca SLR(1) ale LALR(1) 7.15 s.200
+;można dodać startową produkcję Z->A
+A -> a B b
+A -> a d c
+A -> b B c
+A -> b d d
+B -> d
+
+Non-terminals: A B
+Terminals: a b d c
+EPS =
+FIRST[A] = a b
+FIRST[B] = d
+FOLLOW[A] =
+FOLLOW[B] = b c
+PREDICT:
+A ->  a B b : a
+A ->  a d c : a
+A ->  b B c : b
+A ->  b d d : b
+B ->  d : d

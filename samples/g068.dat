@@ -1,0 +1,22 @@
+;nie jest SLR - przykład z Ch4b.pdf
+S -> L = R
+S -> R
+L -> * R
+L -> id
+R -> L
+
+Non-terminals: S L R
+Terminals: = * id
+EPS =
+FIRST[S] = * id
+FIRST[L] = * id
+FIRST[R] = * id
+FOLLOW[S] =
+FOLLOW[L] = =
+FOLLOW[R] = =
+PREDICT:
+S ->  L = R : * id
+S ->  R : * id
+L ->  * R : *
+L ->  id : id
+R ->  L : * id

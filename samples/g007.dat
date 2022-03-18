@@ -1,0 +1,20 @@
+;G4.1 LL(2) z Thesis s.51
+;lang=abc,ace,ade, predict 1 is (a,b) predict 2 is {(a,c),(a,d)}
+;"Thesis G4.1"
+A -> a b c
+A -> B e
+B -> a c
+B -> a d
+
+Non-terminals: A B
+Terminals: a b c e d
+EPS =
+FIRST[A] = a
+FIRST[B] = a
+FOLLOW[A] =
+FOLLOW[B] = e
+PREDICT:
+A ->  a b c : a
+A ->  B e : a
+B ->  a c : a
+B ->  a d : a

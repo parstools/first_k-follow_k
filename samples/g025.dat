@@ -1,0 +1,34 @@
+; z zeszytu s.56 i http://www.jambe.co.nz/UNI/FirstAndFollowSets.html
+; do przykładu tworzenia First i Follow
+; z https://pl.wikipedia.org/wiki/Zbiory_First_i_Follow
+E -> T E'
+E' -> + T E'
+E' -> epsilon
+T -> F T'
+T' -> * F T'
+T' -> epsilon
+F -> ( E )
+F -> id
+
+Non-terminals: E T E' F T'
+Terminals: + * ( ) id
+EPS = E' T'
+FIRST[E] = ( id
+FIRST[T] = ( id
+FIRST[E'] = +
+FIRST[F] = ( id
+FIRST[T'] = *
+FOLLOW[E] = )
+FOLLOW[T] = + )
+FOLLOW[E'] = )
+FOLLOW[F] = + * )
+FOLLOW[T'] = + )
+PREDICT:
+E ->  T E' : ( id
+E' ->  + T E' : +
+E' -> epsilon : )
+T ->  F T' : ( id
+T' ->  * F T' : *
+T' -> epsilon : + )
+F ->  ( E ) : (
+F ->  id : id

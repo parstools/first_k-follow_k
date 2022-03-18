@@ -1,0 +1,14 @@
+;powinien wypisywac blad!
+A -> B +
+B -> A *
+
+Non-terminals: A B
+Terminals: + *
+EPS =
+FIRST[A] =
+FIRST[B] =
+FOLLOW[A] = *
+FOLLOW[B] = +
+PREDICT:
+A ->  B + :
+B ->  A * :

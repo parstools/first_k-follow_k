@@ -1,0 +1,16 @@
+;z zeszytu Lalr(1) powstały z kanonicznego,ale jest LR(0)
+S -> C C
+C -> e C
+C -> d
+
+Non-terminals: S C
+Terminals: e d
+EPS =
+FIRST[S] = e d
+FIRST[C] = e d
+FOLLOW[S] =
+FOLLOW[C] = e d
+PREDICT:
+S ->  C C : e d
+C ->  e C : e
+C ->  d : d

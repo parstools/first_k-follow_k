@@ -1,0 +1,14 @@
+; niejednoznaczna - trzeba dopisać priorytet i łączność
+E -> E + E
+E -> E - E
+E -> i
+
+Non-terminals: E
+Terminals: + - i
+EPS =
+FIRST[E] = i
+FOLLOW[E] = + -
+PREDICT:
+E ->  E + E : i
+E ->  E - E : i
+E ->  i : i

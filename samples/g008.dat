@@ -1,0 +1,18 @@
+;recursive aaa..ac or aaa..ad
+S -> A c
+S -> A d
+A -> A a
+A -> a
+
+Non-terminals: S A
+Terminals: c d a
+EPS =
+FIRST[S] = a
+FIRST[A] = a
+FOLLOW[S] =
+FOLLOW[A] = c d a
+PREDICT:
+S ->  A c : a
+S ->  A d : a
+A ->  A a : a
+A ->  a : a

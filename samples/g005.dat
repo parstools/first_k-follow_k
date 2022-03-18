@@ -1,0 +1,19 @@
+;;G2.6 LL(2) z Thesis s.23
+;"Thesis G2.6"
+A -> a b
+A -> a B
+B -> c
+B -> d
+
+Non-terminals: A B
+Terminals: a b c d
+EPS =
+FIRST[A] = a
+FIRST[B] = c d
+FOLLOW[A] =
+FOLLOW[B] =
+PREDICT:
+A ->  a b : a
+A ->  a B : a
+B ->  c : c
+B ->  d : d

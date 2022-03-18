@@ -1,0 +1,13 @@
+;przyklad gdy do poprawy błedu nie wystarczy wczytać jeden za błednym;
+;błędny ciąg zaczyna się na c
+A -> a d b
+A -> a d c
+
+Non-terminals: A
+Terminals: a d b c
+EPS =
+FIRST[A] = a
+FOLLOW[A] =
+PREDICT:
+A ->  a d b : a
+A ->  a d c : a

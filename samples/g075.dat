@@ -1,0 +1,23 @@
+E -> E + T
+E -> T
+T -> T * F
+T -> F
+F -> ( E )
+F -> i
+
+Non-terminals: E T F
+Terminals: + * ( ) i
+EPS =
+FIRST[E] = ( i
+FIRST[T] = ( i
+FIRST[F] = ( i
+FOLLOW[E] = + )
+FOLLOW[T] = + * )
+FOLLOW[F] = + * )
+PREDICT:
+E ->  E + T : ( i
+E ->  T : ( i
+T ->  T * F : ( i
+T ->  F : ( i
+F ->  ( E ) : (
+F ->  i : i

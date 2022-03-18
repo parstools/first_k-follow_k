@@ -1,0 +1,3 @@
+//Foundation s.3
+s2 : '-'* ID | expr ';';
+expr : INT | '-' expr ;

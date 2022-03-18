@@ -1,0 +1,29 @@
+; czy będzie bład?
+; <HTML> ::= <DocType Opt> '<html' <Parameters> '>' <Head> <Frameset> <Body> '</html>'
+E -> d H F B
+H -> H h
+H -> epsilon
+F -> F f
+F -> epsilon
+B -> B b
+B -> epsilon
+
+Non-terminals: E H F B
+Terminals: d h f b
+EPS = H F B
+FIRST[E] = d
+FIRST[H] = h
+FIRST[F] = f
+FIRST[B] = b
+FOLLOW[E] =
+FOLLOW[H] = h f b
+FOLLOW[F] = f b
+FOLLOW[B] = b
+PREDICT:
+E ->  d H F B : d
+H ->  H h : h
+H -> epsilon : h f b
+F ->  F f : f
+F -> epsilon : f b
+B ->  B b : b
+B -> epsilon : b

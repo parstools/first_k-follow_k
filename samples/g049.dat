@@ -1,0 +1,13 @@
+;maly stos (jezyk +++++ - ten sam,co dla duzego stosu)
+;powinna byc mozliwosc przeksztalcenia do takiej postaci
+E -> E +
+E -> epsilon
+
+Non-terminals: E
+Terminals: +
+EPS = E
+FIRST[E] = +
+FOLLOW[E] = +
+PREDICT:
+E ->  E + : +
+E -> epsilon : +

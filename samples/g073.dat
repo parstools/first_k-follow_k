@@ -1,0 +1,14 @@
+; + i * równy priorytet
+E -> E + i
+E -> E * i
+E -> i
+
+Non-terminals: E
+Terminals: + i *
+EPS =
+FIRST[E] = i
+FOLLOW[E] = + *
+PREDICT:
+E ->  E + i : i
+E ->  E * i : i
+E ->  i : i

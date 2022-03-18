@@ -1,0 +1,25 @@
+;tablica LR (zle przepisana czy lr(1)?) i przyklad kompresji
+; podobna do 7.12
+E -> E + T
+E -> T
+T -> T * F
+T -> F
+F -> ( E )
+F -> id
+
+Non-terminals: E T F
+Terminals: + * ( ) id
+EPS =
+FIRST[E] = ( id
+FIRST[T] = ( id
+FIRST[F] = ( id
+FOLLOW[E] = + )
+FOLLOW[T] = + * )
+FOLLOW[F] = + * )
+PREDICT:
+E ->  E + T : ( id
+E ->  T : ( id
+T ->  T * F : ( id
+T ->  F : ( id
+F ->  ( E ) : (
+F ->  id : id

@@ -1,0 +1,27 @@
+;jak Ch4b.pdf 2-6-Parser-LALR(1).pdf ale od razu z symbolem startowym
+;zamiast Z->L=R powinno być S->L=R
+Z -> S
+Z -> L = R
+S -> R
+L -> * R
+L -> id
+R -> L
+
+Non-terminals: Z S L R
+Terminals: = * id
+EPS =
+FIRST[Z] = * id
+FIRST[S] = * id
+FIRST[L] = * id
+FIRST[R] = * id
+FOLLOW[Z] =
+FOLLOW[S] =
+FOLLOW[L] = =
+FOLLOW[R] = =
+PREDICT:
+Z ->  S : * id
+Z ->  L = R : * id
+S ->  R : * id
+L ->  * R : *
+L ->  id : id
+R ->  L : * id

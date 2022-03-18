@@ -1,0 +1,18 @@
+;książka s148 LR(2) i LL(3)
+X -> Y
+X -> b Y a
+Y -> c
+Y -> c a
+
+Non-terminals: X Y
+Terminals: b a c
+EPS =
+FIRST[X] = b c
+FIRST[Y] = c
+FOLLOW[X] =
+FOLLOW[Y] = a
+PREDICT:
+X ->  Y : c
+X ->  b Y a : b
+Y ->  c : c
+Y ->  c a : c

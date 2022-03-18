@@ -1,0 +1,22 @@
+;nie jest SLR - przykład z Ch4b.pdf, 14 stanów LR1,10 Lalr
+S -> L = R
+S -> R
+L -> * R
+L -> i
+R -> L
+
+Non-terminals: S L R
+Terminals: = * i
+EPS =
+FIRST[S] = * i
+FIRST[L] = * i
+FIRST[R] = * i
+FOLLOW[S] =
+FOLLOW[L] = =
+FOLLOW[R] = =
+PREDICT:
+S ->  L = R : * i
+S ->  R : * i
+L ->  * R : *
+L ->  i : i
+R ->  L : * i

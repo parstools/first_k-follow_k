@@ -1,0 +1,26 @@
+; 'dangling else' - ścisłe rozwiązanie wg. TechnikiKompilacji.pdf
+;S = stmt, M = matched_stmt,U=unmatched_stmt,o = other,
+;i=if, e-expr, t=then (bez 'S->o')
+S -> M
+S -> U
+M -> i e t M e M
+M -> o
+U -> i e t S
+U -> i e t M e U
+
+Non-terminals: S M U
+Terminals: i e t o
+EPS =
+FIRST[S] = i o
+FIRST[M] = i o
+FIRST[U] = i
+FOLLOW[S] =
+FOLLOW[M] = e
+FOLLOW[U] =
+PREDICT:
+S ->  M : i o
+S ->  U : i
+M ->  i e t M e M : i
+M ->  o : o
+U ->  i e t S : i
+U ->  i e t M e U : i

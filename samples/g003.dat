@@ -1,0 +1,29 @@
+;»¿#stack dependent (3.1)
+;Lookahead ba predicts A->b when B calls A, predicts A-> when C calls A.
+;when B calls A - stack P6
+;when C calls A - stack P8
+S -> x B
+S -> y C
+B -> A a
+C -> A b a
+A -> b
+A -> epsilon
+
+Non-terminals: S B C A
+Terminals: x y a b
+EPS = A
+FIRST[S] = x y
+FIRST[B] = a b
+FIRST[C] = b
+FIRST[A] = b
+FOLLOW[S] =
+FOLLOW[B] =
+FOLLOW[C] =
+FOLLOW[A] = a b
+PREDICT:
+S ->  x B : x
+S ->  y C : y
+B ->  A a : a b
+C ->  A b a : b
+A ->  b : b
+A -> epsilon : a b

@@ -1,0 +1,23 @@
+;G3.2 z Thesis s.37 będąca LL(chyba 2)
+;"Thesis G3.2"
+A -> B
+A -> C
+B -> a b
+B -> c d
+C -> a e
+
+Non-terminals: A B C
+Terminals: a b c d e
+EPS =
+FIRST[A] = a c
+FIRST[B] = a c
+FIRST[C] = a
+FOLLOW[A] =
+FOLLOW[B] =
+FOLLOW[C] =
+PREDICT:
+A ->  B : a c
+A ->  C : a
+B ->  a b : a
+B ->  c d : c
+C ->  a e : a

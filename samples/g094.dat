@@ -1,0 +1,32 @@
+;definicja wyrażenia regularnego
+E -> C
+E -> E | C
+C -> F
+C -> C F
+F -> U
+F -> U *
+F -> U +
+U -> c
+U -> ( E )
+
+Non-terminals: E C F U
+Terminals: | * + c ( )
+EPS =
+FIRST[E] = c (
+FIRST[C] = c (
+FIRST[F] = c (
+FIRST[U] = c (
+FOLLOW[E] = | )
+FOLLOW[C] = | c ( )
+FOLLOW[F] = | c ( )
+FOLLOW[U] = | * + c ( )
+PREDICT:
+E ->  C : c (
+E ->  E | C : c (
+C ->  F : c (
+C ->  C F : c (
+F ->  U : c (
+F ->  U * : c (
+F ->  U + : c (
+U ->  c : c
+U ->  ( E ) : (

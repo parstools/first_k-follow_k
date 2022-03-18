@@ -1,0 +1,27 @@
+;przykład do testowania poprawiania błedów
+;bi=i+i+ii, nastepne kontynuacje -,+,e
+E -> b C e
+C -> C ; R
+C -> R
+R -> i = S
+S -> S + i
+S -> i
+
+Non-terminals: E C R S
+Terminals: b e ; i = +
+EPS =
+FIRST[E] = b
+FIRST[C] = i
+FIRST[R] = i
+FIRST[S] = i
+FOLLOW[E] =
+FOLLOW[C] = e ;
+FOLLOW[R] = e ;
+FOLLOW[S] = e ; +
+PREDICT:
+E ->  b C e : b
+C ->  C ; R : i
+C ->  R : i
+R ->  i = S : i
+S ->  S + i : i
+S ->  i : i

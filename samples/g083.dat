@@ -1,0 +1,34 @@
+; z zeszytu s.56 i http://www.jambe.co.nz/UNI/FirstAndFollowSets.html
+; do przykładu tworzenia First i Follow
+; zmiany E'->G, T'->U, bez eps,id->i
+E -> T G
+G -> + T G
+G -> epsilon
+T -> F U
+U -> * F U
+U -> epsilon
+F -> ( E )
+F -> i
+
+Non-terminals: E T G F U
+Terminals: + * ( ) i
+EPS = G U
+FIRST[E] = ( i
+FIRST[T] = ( i
+FIRST[G] = +
+FIRST[F] = ( i
+FIRST[U] = *
+FOLLOW[E] = )
+FOLLOW[T] = + )
+FOLLOW[G] = )
+FOLLOW[F] = + * )
+FOLLOW[U] = + )
+PREDICT:
+E ->  T G : ( i
+G ->  + T G : +
+G -> epsilon : )
+T ->  F U : ( i
+U ->  * F U : *
+U -> epsilon : + )
+F ->  ( E ) : (
+F ->  i : i

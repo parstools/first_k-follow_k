@@ -1,0 +1,45 @@
+;do wartosciowania
+;dodane: 2a zamiast 2*a ->fi,fi(E);  sin x zamiast sin(x)  ->ii,if
+;iF nie moze byc bo sie myli
+;zakomentarzowane G->i(E)
+E -> E + T
+E -> E - T
+E -> T
+T -> T * F
+T -> T / F
+T -> F
+F -> - F
+F -> G
+F -> f
+F -> f G
+G -> ( E )
+G -> i
+G -> i G
+G -> i f
+
+Non-terminals: E T F G
+Terminals: + - * / f ( ) i
+EPS =
+FIRST[E] = - f ( i
+FIRST[T] = - f ( i
+FIRST[F] = - f ( i
+FIRST[G] = ( i
+FOLLOW[E] = + - )
+FOLLOW[T] = + - * / )
+FOLLOW[F] = + - * / )
+FOLLOW[G] = + - * / )
+PREDICT:
+E ->  E + T : - f ( i
+E ->  E - T : - f ( i
+E ->  T : - f ( i
+T ->  T * F : - f ( i
+T ->  T / F : - f ( i
+T ->  F : - f ( i
+F ->  - F : -
+F ->  G : ( i
+F ->  f : f
+F ->  f G : f
+G ->  ( E ) : (
+G ->  i : i
+G ->  i G : i
+G ->  i f : i

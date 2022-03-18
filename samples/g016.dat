@@ -1,0 +1,51 @@
+;do calc
+;\-xor _div #-<<;@-<<
+E -> E + T
+E -> E - T
+E -> E | T
+E -> E \ T
+E -> T
+T -> T * F
+T -> T / F
+T -> T _ F
+T -> T % F
+T -> T & F
+T -> T # F
+T -> T @ F
+T -> T ^ F
+T -> F
+F -> - F
+F -> ( E )
+F -> id
+F -> id ( E )
+F -> c
+
+Non-terminals: E T F
+Terminals: + - | \ * / _ % & # @ ^ ( ) id c
+EPS =
+FIRST[E] = - ( id c
+FIRST[T] = - ( id c
+FIRST[F] = - ( id c
+FOLLOW[E] = + - | \ )
+FOLLOW[T] = + - | \ * / _ % & # @ ^ )
+FOLLOW[F] = + - | \ * / _ % & # @ ^ )
+PREDICT:
+E ->  E + T : - ( id c
+E ->  E - T : - ( id c
+E ->  E | T : - ( id c
+E ->  E \ T : - ( id c
+E ->  T : - ( id c
+T ->  T * F : - ( id c
+T ->  T / F : - ( id c
+T ->  T _ F : - ( id c
+T ->  T % F : - ( id c
+T ->  T & F : - ( id c
+T ->  T # F : - ( id c
+T ->  T @ F : - ( id c
+T ->  T ^ F : - ( id c
+T ->  F : - ( id c
+F ->  - F : -
+F ->  ( E ) : (
+F ->  id : id
+F ->  id ( E ) : id
+F ->  c : c

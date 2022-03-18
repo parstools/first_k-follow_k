@@ -1,0 +1,15 @@
+;if .. then .. else - proste (9 stanów LALR i 16 LR(1))
+;poprawne gdy wybrane S7, gdy wybrana redukcja - nawet jest błąd przy analizie ibtibtses
+S -> i b t S e S
+S -> i b t S
+S -> s
+
+Non-terminals: S
+Terminals: i b t e s
+EPS =
+FIRST[S] = i s
+FOLLOW[S] = e
+PREDICT:
+S ->  i b t S e S : i
+S ->  i b t S : i
+S ->  s : s

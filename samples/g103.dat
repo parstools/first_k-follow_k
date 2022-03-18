@@ -1,0 +1,12 @@
+;najprostsza niejednoznaczna
+S -> S S
+S -> i
+
+Non-terminals: S
+Terminals: i
+EPS =
+FIRST[S] = i
+FOLLOW[S] = i
+PREDICT:
+S ->  S S : i
+S ->  i : i

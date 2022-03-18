@@ -1,0 +1,12 @@
+;2-4-Parser-LR(1)-czesc-2.pdf
+S -> S a S b
+S -> epsilon
+
+Non-terminals: S
+Terminals: a b
+EPS = S
+FIRST[S] = a
+FOLLOW[S] = a b
+PREDICT:
+S ->  S a S b : a
+S -> epsilon : a b

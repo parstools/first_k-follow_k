@@ -1,0 +1,15 @@
+; + i * równy priorytet, ale * ma prawostronną łączność
+; uwaga, nie możnatak definiować bo konflikt; dac to jako przykład
+E -> E + i
+E -> i * E
+E -> i
+
+Non-terminals: E
+Terminals: + i *
+EPS =
+FIRST[E] = i
+FOLLOW[E] = +
+PREDICT:
+E ->  E + i : i
+E ->  i * E : i
+E ->  i : i

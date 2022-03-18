@@ -1,0 +1,34 @@
+;Gramatyka LR(1) ale nie Lalr(1) - książka s.209
+A -> a B c B
+A -> B
+A -> D
+B -> b
+B -> F f
+D -> d E
+E -> F c A
+E -> F c E
+F -> b
+
+Non-terminals: A B D F E
+Terminals: a c b f d
+EPS =
+FIRST[A] = a b d
+FIRST[B] = b
+FIRST[D] = d
+FIRST[F] = b
+FIRST[E] = b
+FOLLOW[A] =
+FOLLOW[B] = c
+FOLLOW[D] =
+FOLLOW[F] = c f
+FOLLOW[E] =
+PREDICT:
+A ->  a B c B : a
+A ->  B : b
+A ->  D : d
+B ->  b : b
+B ->  F f : b
+D ->  d E : d
+E ->  F c A : b
+E ->  F c E : b
+F ->  b : b

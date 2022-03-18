@@ -1,0 +1,18 @@
+;Bardziej rozbudowany prezykład niejednoznacznej z Node21 z Lambda
+E -> E + E
+E -> E * E
+E -> ( E )
+E -> i
+E -> n
+
+Non-terminals: E
+Terminals: + * ( ) i n
+EPS =
+FIRST[E] = ( i n
+FOLLOW[E] = + * )
+PREDICT:
+E ->  E + E : ( i n
+E ->  E * E : ( i n
+E ->  ( E ) : (
+E ->  i : i
+E ->  n : n
