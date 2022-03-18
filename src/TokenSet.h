@@ -3,7 +3,7 @@
 //
 #pragma once
 #include <string>
-#include "BitSet.h"
+#include <set>
 #include "GramNames.h"
 
 using namespace std;
@@ -11,7 +11,7 @@ using namespace std;
 class TokenSet {
 private:
     bool eps=false;
-    BitSet bits;
+    std::set<int> bits;
 public:
     TokenSet(){}
     bool exists(int tokeIndex);

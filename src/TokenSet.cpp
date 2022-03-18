@@ -5,15 +5,17 @@
 #include "TokenSet.h"
 
 bool TokenSet::exists(int tokeIndex) {
-    return bits.get(tokeIndex);
+    return bits.find(tokeIndex) != bits.end();
 }
 
 bool TokenSet::existsEps() {
     return eps;
 }
+
 bool TokenSet::add(int tokeIndex) {
-    return bits.set(tokeIndex);
+    return bits.insert(tokeIndex).second;
 }
+
 bool TokenSet::addEps() {
     bool res = !eps;
     eps = true;

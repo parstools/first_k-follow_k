@@ -1,6 +1,5 @@
 #include <iostream>
 #include "TokenSet.h"
-#include "BitSet.h"
 #include "Rules.h"
 #include "Grammar.h"
 #include "GramSourceSimple.h"
