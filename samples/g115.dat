@@ -1,0 +1,17 @@
+;z https://pl.wikipedia.org/wiki/Parser_LL pierwszy
+;przykład, który jest LL(1) zamieniony
+expr -> number OptionalPlusExpr
+OptionalPlusExpr -> epsilon
+OptionalPlusExpr -> + expr
+
+Non-terminals: expr OptionalPlusExpr
+Terminals: number +
+EPS = OptionalPlusExpr
+FIRST[expr] = number
+FIRST[OptionalPlusExpr] = +
+FOLLOW[expr] =
+FOLLOW[OptionalPlusExpr] =
+PREDICT:
+expr ->  number OptionalPlusExpr : number
+OptionalPlusExpr -> epsilon :
+OptionalPlusExpr ->  + expr : +

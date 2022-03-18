@@ -1,0 +1,27 @@
+;druga z https://pl.wikipedia.org/wiki/Parser_LL
+;po konwersji
+expr -> product OpcjonalPlusExpr
+OpcjonalPlusExpr -> epsilon
+OpcjonalPlusExpr -> + expr
+product -> liczba OpcjonalMulProduct
+OpcjonalMulProduct -> epsilon
+OpcjonalMulProduct -> * product
+
+Non-terminals: expr product OpcjonalPlusExpr OpcjonalMulProduct
+Terminals: + liczba *
+EPS = OpcjonalPlusExpr OpcjonalMulProduct
+FIRST[expr] = liczba
+FIRST[product] = liczba
+FIRST[OpcjonalPlusExpr] = +
+FIRST[OpcjonalMulProduct] = *
+FOLLOW[expr] =
+FOLLOW[product] = +
+FOLLOW[OpcjonalPlusExpr] =
+FOLLOW[OpcjonalMulProduct] = +
+PREDICT:
+expr ->  product OpcjonalPlusExpr : liczba
+OpcjonalPlusExpr -> epsilon :
+OpcjonalPlusExpr ->  + expr : +
+product ->  liczba OpcjonalMulProduct : liczba
+OpcjonalMulProduct -> epsilon : +
+OpcjonalMulProduct ->  * product : *

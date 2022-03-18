@@ -1,0 +1,15 @@
+;z https://pl.wikipedia.org/wiki/Parser_LL pierwszy
+;przykład, który nie jest LL(1) ale da się zamienić
+;już do niej nie należy, ponieważ spodziewając się Wyrażenia i widząc liczbę, 
+;nie wiemy czy zamienić ją na stosie na liczba czy liczba '+' Wyrażenie. 
+expr -> number + expr
+expr -> number
+
+Non-terminals: expr
+Terminals: number +
+EPS =
+FIRST[expr] = number
+FOLLOW[expr] =
+PREDICT:
+expr ->  number + expr : number
+expr ->  number : number
